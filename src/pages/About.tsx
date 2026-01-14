@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Code2, ShoppingBag, Award, Users, Coffee, Heart, Briefcase, GraduationCap, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import Nafis from "../../public/nafis.jpg"
 
 const stats = [
   { icon: Award, value: "50+", label: "Projects Completed" },
@@ -101,7 +102,7 @@ const About = () => {
               >
                 <div className="aspect-square rounded-3xl overflow-hidden glass p-4">
                   <img
-                    src='../../public/nafis.jpg'
+                    src={Nafis}
                     alt="Nafij - Frontend & Shopify Developer"
                     className="w-full h-full object-cover rounded-2xl"
                   />
