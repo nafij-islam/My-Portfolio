@@ -3,6 +3,8 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ecommerce from "../../../public/Ecommerce.png"
+import quater from '../../../public/quater.png'
+import finsprojects from '../../../public/fins.png'
 
 const projects = [
   {
@@ -16,21 +18,21 @@ const projects = [
   },
   {
     id: 2,
-    title: "Dashboard",
+    title: "Quater Site",
     description: "A comprehensive analytics dashboard built with React and TypeScript.",
     tags: ["React", "TypeScript", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: quater,
+    liveUrl: "https://quater-six.vercel.app/",
+    githubUrl: "https://github.com/nafij-islam/Quater",
   },
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Fins Projects",
     description: "A creative portfolio for a photographer with stunning animations.",
     tags: ["Next.js", "Framer Motion", "GSAP"],
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: finsprojects,
+    liveUrl: "https://fins-project.vercel.app/",
+    githubUrl: "https://github.com/nafij-islam/Fins-Project",
   },
 ];
 

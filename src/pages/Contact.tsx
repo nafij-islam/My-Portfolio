@@ -2,22 +2,22 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Github, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "nafij@example.com", href: "mailto:nafij@example.com" },
+  { icon: Mail, label: "Email", value: "sahariannafis70@gmail.com", href: "mailto:sahariannafis70@gmail.com" },
   { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh", href: "#" },
-  { icon: Phone, label: "Phone", value: "+880 1234 567890", href: "tel:+8801234567890" },
-];
+  { icon: Phone, label: "Phone", value: "+8801633003462", href: "tel:+8801633003462" },
+]; 
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/nafij-islam" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/nafij-islam-b15261357/" },
+  { icon: Facebook, label: "Twitter", href: "https://www.facebook.com/saharian.nafis.256620" },
 ];
 
 const Contact = () => {
@@ -28,15 +28,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const formData = new FormData(e.currentTarget);
+    
+    // Apnar Access Key ekhane set kora holo
+    formData.append("access_key", "e639c84c-7ca4-4081-93e2-761422a96ca1");
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error!",
+          description: data.message || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Network Error",
+        description: "Please check your internet connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,30 +161,24 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium mb-2"
-                      >
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Name
                       </label>
                       <Input
                         id="name"
-                        name="name"
+                        name="name" // Important for email
                         placeholder="Your name"
                         required
                         className="bg-secondary/50"
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium mb-2"
-                      >
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">
                         Email
                       </label>
                       <Input
                         id="email"
-                        name="email"
+                        name="email" // Important for email
                         type="email"
                         placeholder="your@email.com"
                         required
@@ -167,30 +187,24 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
                       Subject
                     </label>
                     <Input
                       id="subject"
-                      name="subject"
+                      name="subject" // Important for email
                       placeholder="Project inquiry"
                       required
                       className="bg-secondary/50"
                     />
                   </div>
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium mb-2"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Message
                     </label>
                     <Textarea
                       id="message"
-                      name="message"
+                      name="message" // Important for email
                       placeholder="Tell me about your project..."
                       rows={6}
                       required
@@ -203,9 +217,7 @@ const Contact = () => {
                     className="w-full glow-primary"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
+                    {isSubmitting ? "Sending..." : (
                       <>
                         Send Message <Send className="ml-2" size={18} />
                       </>
