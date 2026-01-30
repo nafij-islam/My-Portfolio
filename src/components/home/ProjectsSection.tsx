@@ -13,8 +13,8 @@ const projects = [
     description: "A modern E-Coomerce store with React and TailWind CSS",
     tags: ["HTML","CSS", "JavaScript","TailWind","TansStack"],
     image: ecommerce,
-    liveUrl: "https://ecommerce-phi-six-69.vercel.app/",
-    githubUrl: "https://github.com/nafij-islam/Ecommerce",
+    liveUrl: "#",
+    githubUrl: "#",
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ const projects = [
     description: "A comprehensive analytics dashboard built with React and TypeScript.",
     tags: ["React", "TypeScript", "Tailwind"],
     image: quater,
-    liveUrl: "https://quater-six.vercel.app/",
-    githubUrl: "https://github.com/nafij-islam/Quater",
+    liveUrl: "#",
+    githubUrl: "#",
   },
   {
     id: 3,
@@ -31,8 +31,8 @@ const projects = [
     description: "A creative portfolio for a photographer with stunning animations.",
     tags: ["Next.js", "Framer Motion", "GSAP"],
     image: finsprojects,
-    liveUrl: "https://fins-project.vercel.app/",
-    githubUrl: "https://github.com/nafij-islam/Fins-Project",
+    liveUrl: "#",
+    githubUrl: "#",
   },
 ];
 
