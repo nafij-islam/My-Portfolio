@@ -12,8 +12,8 @@ const allProjects = [
       "A modern Shopify store with custom theme, seamless checkout experience, and advanced filtering options.",
     tags: ["Html","CSS", "Tailwind", "JavaScript","React" ],
     image: Ecommerce,
-    liveUrl: "https://ecommerce-phi-six-69.vercel.app/",
-    githubUrl: "https://github.com/nafij-islam/Ecommerce",
+    liveUrl: "#",
+    githubUrl: "#",
     category: "React",
   },
   {

@@ -14,35 +14,31 @@ const stats = [
 ];
 
 const journeyItems = [
-  {
-    year: "2025 - Present",
-    title: "Frontend Developer",
-    company: "Freelance",
-    description: "Building custom web applications and Shopify stores for clients worldwide.",
-    icon: Rocket,
-    color: "from-emerald-500 to-cyan-500",
-  },
-  {
-    year: "2025 - Present",
-    title: "Shopify Developer",
-    company: "E-commerce Agency",
-    description: "Developed and maintained 30+ Shopify stores with custom themes and integrations.",
-    icon: ShoppingBag,
-    color: "from-violet-500 to-purple-500",
-  },
-  {
-    year: "2024 - Present",
+  { id:1,
+    year: "2024",
     title: "Frontend Developer",
     company: "Tech Startup",
     description: "Built responsive web applications using React and modern frontend technologies.",
     icon: Code2,
     color: "from-orange-500 to-amber-500",
   },
+
   {
+    id:3,
+    year: "2025-2026 > Present",
+    title: "Shopify Developer",
+    company: "E-commerce Agency",
+    description: "Developed and maintained 30+ Shopify stores with custom themes and integrations.",
+    icon: ShoppingBag,
+    color: "from-violet-500 to-purple-500",
+  },
+
+  {
+    id:4,
     year: "2016 - 2020",
     title: "Computer Course",
     company: "University",
-    description: "Studied computer science fundamentals, algorithms, and software engineering principles.",
+    description: "",
     icon: GraduationCap,
     color: "from-blue-500 to-indigo-500",
   },
@@ -87,7 +83,7 @@ const About = () => {
                     <Link to="/contact">Get In Touch</Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <a href="/resume.pdf" download>
+                    <a href="/Nafij.pdf" download>
                       Download CV
                     </a>
                   </Button>
@@ -184,7 +180,7 @@ const About = () => {
                   transition={{ delay: index * 0.15, duration: 0.5 }}
                   className="group relative"
                 >
-                  <div className="relative glass rounded-3xl p-6 lg:p-8 h-full border border-white/5 hover:border-primary/30 transition-all duration-500 overflow-hidden">
+                  <div key={index} className="relative glass rounded-3xl p-6 lg:p-8 h-full border border-white/5 hover:border-primary/30 transition-all duration-500 overflow-hidden">
                     {/* Background gradient on hover */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                     
