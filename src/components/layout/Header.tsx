@@ -20,7 +20,7 @@ export const Header = () => {
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="font-display text-[30px] font-bold">
-            <span className="text-gradient">Nafij</span>
+            <span className="text-gradient">Nafij.</span>
           </Link>
 
           {/* Desktop Navigation */}
