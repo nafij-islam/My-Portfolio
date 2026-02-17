@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Send, Mail, MapPin, Phone, Github, Linkedin, Facebook } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Github, Linkedin, Facebook, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,9 +15,12 @@ const contactInfo = [
 ]; 
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/nafij-islam" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/nafij-islam-b15261357/" },
-  { icon: Facebook, label: "Twitter", href: "https://www.facebook.com/saharian.nafis.256620" },
+  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/nafij_islam1", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/saharian.nafis.256620", label: "Twitter" },
+  { icon: Youtube, href: "https://www.youtube.com/@LearnwithNafij", label: "Twitter" },
+  { icon: Mail, href: "mailto:sahariannafis70@gmail.com", label: "Email" },
 ];
 
 const Contact = () => {
