@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Youtube, Facebook } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/nafij_islam1", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/saharian.nafis.256620", label: "Twitter" },
+  { icon: Youtube, href: "https://www.youtube.com/@LearnwithNafij", label: "Twitter" },
   { icon: Mail, href: "mailto:sahariannafis70@gmail.com", label: "Email" },
 ];
 
