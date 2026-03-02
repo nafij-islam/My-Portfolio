@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,8 +7,9 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
+import WhatsAppFloat from "./components/ui/WhatsAppFloat";
+import Loader from "./components/ui/Loader";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = lazy(() => import("./pages/Index"));
@@ -19,41 +20,51 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+/* =========================
+   SMOOTH SCROLL
+========================= */
+const useSmoothScroll = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    const raf = (time) => {
+      lenis.raf(time * 1000);
+    };
+
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(raf);
+    gsap.ticker.lagSmoothing(0);
+
+    return () => {
+      lenis.destroy();
+      gsap.ticker.remove(raf);
+    };
+  }, []);
+};
+
+/* =========================
+   ROUTE ANIMATION
+========================= */
 const AnimatedRoutes = () => {
   const location = useLocation();
   const pageRef = useRef(null);
 
   useEffect(() => {
-    // 1. Initialize Lenis Smooth Scroll
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-    });
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        pageRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6, ease: "power2.inOut" }
+      );
+    }, pageRef);
 
-    // Connect Lenis to GSAP ScrollTrigger
-    lenis.on('scroll', ScrollTrigger.update);
+    window.scrollTo(0, 0);
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
-    // 2. Page Transition Animation
-    gsap.fromTo(
-      pageRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.6, ease: "power2.inOut" }
-    );
-
-    // Cleanup on unmount
-    return () => {
-      lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
-    };
+    return () => ctx.revert();
   }, [location]);
 
   return (
@@ -69,18 +80,33 @@ const AnimatedRoutes = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading...</div>}>
-          <AnimatedRoutes />
-        </Suspense>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+/* =========================
+   MAIN APP
+========================= */
+const App = () => {
+  const [loading, setLoading] = useState(true);
 
-export default App
+  useSmoothScroll();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+
+        {loading && <Loader onFinish={() => setLoading(false)} />}
+
+        {!loading && (
+          <BrowserRouter>
+            <Suspense fallback={null}>
+              <AnimatedRoutes />
+              <WhatsAppFloat />
+            </Suspense>
+          </BrowserRouter>
+        )}
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
+
+export default App;
