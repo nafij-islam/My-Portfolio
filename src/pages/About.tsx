@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import nafis from "../../public/Nafij-Islam.png";
+import bannerimg from "../../public/bannerimg.jpeg";
 
 const stats = [
   { icon: Award, value: "50+", label: "Projects Completed" },
@@ -262,6 +263,14 @@ const About = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
             />
+           <div className="pt-20">
+             <h2 className="text-3xl text-center pb-5 md:pb-10 lg:pb-10 md:text-4xl lg:text-5xl font-display font-bold">
+                THE MISSION
+              </h2>
+             <div >
+              <img className="rounded-2xl" src={bannerimg} alt="" />
+             </div>
+           </div>
           </div>
         </section>
       </main>
