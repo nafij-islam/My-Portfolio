@@ -11,14 +11,14 @@ import {
 } from "lucide-react";
 
 const skills = [
-  { icon: Code2, name: "React / Next.js", level: 95 },
-  { icon: Palette, name: "Tailwind CSS", level: 95 },
-  { icon: ShoppingBag, name: "Shopify Liquid", level: 95 },
-  { icon: Zap, name: "TypeScript", level: 60 },
-  { icon: Globe, name: "REST APIs", level: 50 },
+  { icon: Code2, name: "Frontend Development", level: 95 },
+  { icon: Palette, name: "React / Next.js", level: 90 },
   { icon: Smartphone, name: "Responsive Design", level: 95 },
-  { icon: Database, name: "Headless CMS", level: 95 },
-  { icon: GitBranch, name: "Git & GitHub", level: 95 },
+  { icon: Zap, name: "JavaScript / TypeScript", level: 80 },
+  { icon: ShoppingBag, name: "Shopify Development", level: 95 },
+  { icon: Globe, name: "Bubble.io Development", level: 95 },
+  { icon: Database, name: "Backend Development", level: 75 },
+  { icon: GitBranch, name: "Git & GitHub", level: 90 },
 ];
 
 const container = {

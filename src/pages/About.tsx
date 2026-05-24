@@ -26,44 +26,69 @@ const stats = [
 const journeyItems = [
   {
     id: 1,
-    year: "2024 > 2025",
+    year: "2024 - Present",
     title: "Frontend Developer",
-    company: "Tech Startup",
+    company: "Freelance & Personal Projects",
     description:
-      "Built responsive web applications using React and modern frontend technologies.",
+      "Building responsive and modern web applications using React, Next.js, Tailwind CSS, and modern frontend technologies.",
     icon: Code2,
     color: "from-orange-500 to-amber-500",
   },
+
   {
     id: 2,
-    year: "2025-2026 > Present",
-    title: "Shopify Developer",
-    company: "E-commerce Agency",
+    year: "2024 - Present",
+    title: "Backend Developer",
+    company: "Freelance & Personal Projects",
     description:
-      "Developed and maintained 30+ Shopify stores with custom themes and integrations.",
+      "Working with backend technologies, APIs, databases, and full-stack application development.",
+    icon: Code2,
+    color: "from-green-500 to-emerald-500",
+  },
+
+  {
+    id: 3,
+    year: "2025 - Present",
+    title: "Shopify Developer",
+    company: "E-commerce Projects",
+    description:
+      "Developing and customizing Shopify stores with custom themes, Liquid, and modern e-commerce solutions.",
     icon: ShoppingBag,
     color: "from-violet-500 to-purple-500",
   },
-{
-  id: 3,
-  year: "2023 - 2024",
-  title: "Computer Course",
-  company: "Habiganj Polytechnic Institute",
-  description: "Completed a computer course with practical training in basic computing and IT skills.",
-  icon: GraduationCap,
-  color: "from-blue-500 to-indigo-500",
-},
 
-{
-  id: 4,
-  year: "2023 - 2024",
-  title: "HSC (Higher Secondary Certificate)",
-  company: "Kamalganj Govt. College",
-  description: "Completed HSC in 2024 with a GPA of 3.75 in Business Studies.",
-  icon: GraduationCap,
- color: "from-orange-500 to-amber-500",
-}
+  {
+    id: 4,
+    year: "2025 - Present",
+    title: "Bubble.io Developer",
+    company: "No-Code Web Applications",
+    description:
+      "Creating scalable no-code web applications and automation systems using Bubble.io.",
+    icon: Code2,
+    color: "from-pink-500 to-rose-500",
+  },
 
+  {
+    id: 5,
+    year: "2023 - 2024",
+    title: "Computer Course",
+    company: "Habiganj Polytechnic Institute",
+    description:
+      "Completed a computer course with practical training in basic computing and IT skills.",
+    icon: GraduationCap,
+    color: "from-blue-500 to-indigo-500",
+  },
+
+  {
+    id: 6,
+    year: "2023 - 2024",
+    title: "HSC (Higher Secondary Certificate)",
+    company: "Kamalganj Govt. College",
+    description:
+      "Completed HSC in 2024 with a GPA of 3.75 in Business Studies.",
+    icon: GraduationCap,
+    color: "from-orange-500 to-amber-500",
+  },
 ];
 
 const About = () => {
@@ -86,23 +111,28 @@ const About = () => {
                 </span>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                  Crafting Digital
+                  Building Modern
                   <br />
-                  <span className="text-gradient">Experiences</span>
+                  <span className="text-gradient">Web Experiences</span>
                 </h1>
 
                 <p className="text-muted-foreground text-lg mb-6">
-                  Hi, I'm Nafij — a passionate Frontend Developer and Shopify
-                  Expert based in Bangladesh. With over 3+ years of experience,
-                  I specialize in building beautiful, performant web applications
-                  and e-commerce solutions.
+                  Hi, I'm Nafij — a passionate Frontend, Backend, Shopify, and
+                  Bubble.io Developer based in Bangladesh. I specialize in
+                  building modern, responsive, and high-performance web
+                  applications, e-commerce stores, and scalable no-code
+                  solutions. I love creating clean user experiences with modern
+                  technologies and turning ideas into real digital products.
                 </p>
 
                 <p className="text-muted-foreground mb-8">
-                  My journey started with curiosity about how websites work,
-                  which quickly evolved into a career dedicated to creating
-                  exceptional digital experiences. I believe in clean code,
-                  thoughtful design, and solutions that truly serve users.
+                  My journey started with a deep curiosity about how modern
+                  websites and applications are built, which gradually turned
+                  into a passion for web development and digital product
+                  creation. I enjoy building clean, responsive, and
+                  user-friendly experiences using modern technologies, Shopify,
+                  and Bubble.io. I believe in clean code, creative design, and
+                  developing solutions that provide real value to users.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -263,14 +293,14 @@ const About = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"
             />
-           <div className="pt-20">
-             <h2 className="text-3xl text-center pb-5 md:pb-10 lg:pb-10 md:text-4xl lg:text-5xl font-display font-bold">
+            <div className="pt-20">
+              <h2 className="text-3xl text-center pb-5 md:pb-10 lg:pb-10 md:text-4xl lg:text-5xl font-display font-bold">
                 THE MISSION
               </h2>
-             <div >
-              <img className="rounded-2xl" src={bannerimg} alt="" />
-             </div>
-           </div>
+              <div>
+                <img className="rounded-2xl" src={bannerimg} alt="" />
+              </div>
+            </div>
           </div>
         </section>
       </main>

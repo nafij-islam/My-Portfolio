@@ -10,6 +10,13 @@ const services = [
       "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
     features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
   },
+    {
+    icon: Code2,
+    title: "Frontend Development",
+    description:
+      "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
+    features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
+  },
   {
     icon: ShoppingBag,
     title: "Shopify Development",
@@ -31,6 +38,19 @@ const services = [
       "Optimizing websites for speed, SEO, and exceptional user experience across all devices.",
     features: ["Core Web Vitals", "SEO Optimization", "Code Splitting", "Image Optimization"],
   },
+   {
+  icon: Code2,
+  title: "Bubble Web & App Performance",
+  description:
+    "Optimizing websites and mobile apps for blazing-fast speed, SEO, smooth performance, and exceptional user experience across all devices.",
+  features: [
+    "Core Web Vitals",
+    "SEO Optimization",
+    "App Performance",
+    "Code Splitting",
+    "Image Optimization"
+  ]
+}
 ];
 
 const container = {
