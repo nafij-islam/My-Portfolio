@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Code2, ShoppingBag, Palette, Rocket, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const services = [
   {
@@ -134,7 +136,7 @@ export const ServicesSection = () => {
           className="text-center mt-12"
         >
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all font-medium"
           >
             Discuss Your Project <ArrowRight size={18} />

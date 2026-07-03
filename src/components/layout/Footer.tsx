@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail, Youtube, Facebook, MessageCircle } from "lucide-react";
 
 const socialLinks = [
@@ -17,7 +19,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <Link to="/" className="font-display text-xl font-bold">
+            <Link href="/" className="font-display text-xl font-bold">
               <span className="text-gradient">Nafij</span>
             </Link>
             <p className="text-muted-foreground text-sm">

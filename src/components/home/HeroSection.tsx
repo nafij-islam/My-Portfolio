@@ -1,7 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowDown, Code2, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -57,10 +59,10 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
             <Button size="lg" className="glow-primary" asChild>
-              <Link to="/projects">View My Work</Link>
+              <Link href="/projects">View My Work</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">Get In Touch</Link>
+              <Link href="/contact">Get In Touch</Link>
             </Button>
           </motion.div>
 

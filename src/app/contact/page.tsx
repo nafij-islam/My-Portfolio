@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
@@ -12,18 +14,18 @@ const contactInfo = [
   { icon: Mail, label: "Email", value: "sahariannafis70@gmail.com", href: "mailto:sahariannafis70@gmail.com" },
   { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh", href: "#" },
   { icon: Phone, label: "Phone", value: "+8801633003462", href: "tel:+8801633003462" },
-]; 
+];
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/nafij_islam1", label: "Twitter" },
-  { icon: Facebook, href: "https://www.facebook.com/saharian.nafis.256620", label: "Twitter" },
-  { icon: Youtube, href: "https://www.youtube.com/@LearnwithNafij", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/saharian.nafis.256620", label: "Facebook" },
+  { icon: Youtube, href: "https://www.youtube.com/@LearnwithNafij", label: "Youtube" },
   { icon: Mail, href: "mailto:sahariannafis70@gmail.com", label: "Email" },
 ];
 
-const Contact = () => {
+export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -33,7 +35,7 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
     
-    // Apnar Access Key ekhane set kora holo
+    // Web3Forms Access Key is set here
     formData.append("access_key", "cb103f91-951a-4ea7-aaf3-8c621919551e");
 
     try {
@@ -169,7 +171,7 @@ const Contact = () => {
                       </label>
                       <Input
                         id="name"
-                        name="name" // Important for email
+                        name="name"
                         placeholder="Your name"
                         required
                         className="bg-secondary/50"
@@ -181,7 +183,7 @@ const Contact = () => {
                       </label>
                       <Input
                         id="email"
-                        name="email" // Important for email
+                        name="email"
                         type="email"
                         placeholder="your@email.com"
                         required
@@ -195,7 +197,7 @@ const Contact = () => {
                     </label>
                     <Input
                       id="subject"
-                      name="subject" // Important for email
+                      name="subject"
                       placeholder="Project inquiry"
                       required
                       className="bg-secondary/50"
@@ -207,7 +209,7 @@ const Contact = () => {
                     </label>
                     <Textarea
                       id="message"
-                      name="message" // Important for email
+                      name="message"
                       placeholder="Tell me about your project..."
                       rows={6}
                       required
@@ -235,6 +237,4 @@ const Contact = () => {
       <Footer />
     </div>
   );
-};
-
-export default Contact;
+}

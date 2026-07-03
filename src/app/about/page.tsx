@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -12,9 +14,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import nafis from "../../public/Nafij-Islam.png";
-import bannerimg from "../../public/bannerimg.jpeg";
+import Link from "next/link";
 
 const stats = [
   { icon: Award, value: "50+", label: "Projects Completed" },
@@ -34,7 +34,6 @@ const journeyItems = [
     icon: Code2,
     color: "from-orange-500 to-amber-500",
   },
-
   {
     id: 2,
     year: "2024 - Present",
@@ -45,7 +44,6 @@ const journeyItems = [
     icon: Code2,
     color: "from-green-500 to-emerald-500",
   },
-
   {
     id: 3,
     year: "2025 - Present",
@@ -56,7 +54,6 @@ const journeyItems = [
     icon: ShoppingBag,
     color: "from-violet-500 to-purple-500",
   },
-
   {
     id: 4,
     year: "2025 - Present",
@@ -67,7 +64,6 @@ const journeyItems = [
     icon: Code2,
     color: "from-pink-500 to-rose-500",
   },
-
   {
     id: 5,
     year: "2023 - 2024",
@@ -78,7 +74,6 @@ const journeyItems = [
     icon: GraduationCap,
     color: "from-blue-500 to-indigo-500",
   },
-
   {
     id: 6,
     year: "2023 - 2024",
@@ -91,7 +86,7 @@ const journeyItems = [
   },
 ];
 
-const About = () => {
+export default function About() {
   return (
     <div className="min-h-screen">
       <Header />
@@ -137,7 +132,7 @@ const About = () => {
 
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="glow-primary" asChild>
-                    <Link to="/contact">Get In Touch</Link>
+                    <Link href="/contact">Get In Touch</Link>
                   </Button>
 
                   <Button size="lg" variant="outline" asChild>
@@ -157,7 +152,7 @@ const About = () => {
               >
                 <div className="aspect-square rounded-3xl overflow-hidden glass p-4">
                   <img
-                    src={nafis}
+                    src="/Nafij-Islam.png"
                     alt="Nafij - Frontend & Shopify Developer"
                     className="w-full h-full object-cover rounded-2xl"
                   />
@@ -298,7 +293,7 @@ const About = () => {
                 THE MISSION
               </h2>
               <div>
-                <img className="rounded-2xl" src={bannerimg} alt="" />
+                <img className="rounded-2xl w-full" src="/bannerimg.jpeg" alt="" />
               </div>
             </div>
           </div>
@@ -308,6 +303,4 @@ const About = () => {
       <Footer />
     </div>
   );
-};
-
-export default About;
+}

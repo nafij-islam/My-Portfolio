@@ -1,8 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ExternalLink, Github } from "lucide-react";
-import Ecommerce from '../../public/Ecommerce.png'
 
 const allProjects = [
   {
@@ -10,8 +11,8 @@ const allProjects = [
     title: "E-Commerce Store",
     description:
       "A modern Shopify store with custom theme, seamless checkout experience, and advanced filtering options.",
-    tags: ["Html","CSS", "Tailwind", "JavaScript","React" ],
-    image: Ecommerce,
+    tags: ["Html", "CSS", "Tailwind", "JavaScript", "React"],
+    image: "/Ecommerce.png",
     liveUrl: "#",
     githubUrl: "#",
     category: "React",
@@ -88,7 +89,7 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-const Projects = () => {
+export default function Projects() {
   return (
     <div className="min-h-screen">
       <Header />
@@ -180,6 +181,4 @@ const Projects = () => {
       <Footer />
     </div>
   );
-};
-
-export default Projects;
+}

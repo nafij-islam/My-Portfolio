@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,13 +16,13 @@ const navLinks = [
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="font-display text-[30px] font-bold">
+          <Link href="/" className="font-display text-[30px] font-bold">
             <span className="text-gradient">Nafij.</span>
           </Link>
 
@@ -28,9 +31,9 @@ export const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`font-medium text-sm transition-colors hover:text-primary ${
-                  location.pathname === link.path
+                  pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
@@ -39,7 +42,7 @@ export const Header = () => {
               </Link>
             ))}
             <Button variant="default" size="sm" asChild>
-              <Link to="/contact">Hire Me</Link>
+              <Link href="/contact">Hire Me</Link>
             </Button>
           </div>
 
@@ -67,10 +70,10 @@ export const Header = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`font-medium py-2 transition-colors ${
-                    location.pathname === link.path
+                    pathname === link.path
                       ? "text-primary"
                       : "text-muted-foreground"
                   }`}
@@ -79,7 +82,7 @@ export const Header = () => {
                 </Link>
               ))}
               <Button variant="default" className="mt-2" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link href="/contact" onClick={() => setIsOpen(false)}>
                   Hire Me
                 </Link>
               </Button>

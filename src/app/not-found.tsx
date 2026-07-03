@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+"use client";
+
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-const NotFound = () => {
+export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -29,12 +31,12 @@ const NotFound = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="glow-primary" asChild>
-              <Link to="/">
+              <Link href="/">
                 <Home className="mr-2" size={18} /> Back to Home
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">
+              <Link href="/contact">
                 <ArrowLeft className="mr-2" size={18} /> Contact Me
               </Link>
             </Button>
@@ -43,6 +45,4 @@ const NotFound = () => {
       </div>
     </div>
   );
-};
-
-export default NotFound;
+}

@@ -1,10 +1,9 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ecommerce from "../../../public/Ecommerce.png"
-import quater from '../../../public/quater.png'
-import finsprojects from '../../../public/fins.png'
 
 const projects = [
   {
@@ -12,7 +11,7 @@ const projects = [
     title: "E-Commerce Store",
     description: "A modern E-Coomerce store with React and TailWind CSS",
     tags: ["HTML","CSS", "JavaScript","TailWind","TansStack"],
-    image: ecommerce,
+    image: "/Ecommerce.png",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -21,7 +20,7 @@ const projects = [
     title: "Quater Site",
     description: "A comprehensive analytics dashboard built with React and TypeScript.",
     tags: ["React", "TypeScript", "Tailwind"],
-    image: quater,
+    image: "/quater.png",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -30,7 +29,7 @@ const projects = [
     title: "Fins Projects",
     description: "A creative portfolio for a photographer with stunning animations.",
     tags: ["Next.js", "Framer Motion", "GSAP"],
-    image: finsprojects,
+    image: "/fins.png",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -71,7 +70,7 @@ export const ProjectsSection = () => {
             </h2>
           </div>
           <Button variant="outline" asChild>
-            <Link to="/projects" className="flex items-center gap-2">
+            <Link href="/projects" className="flex items-center gap-2">
               View All Projects <ArrowRight size={16} />
             </Link>
           </Button>
