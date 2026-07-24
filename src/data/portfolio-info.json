@@ -52,6 +52,13 @@
   ],
   "projects": [
     {
+      "title": "Timeless Media Box",
+      "description": "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
+      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+      "liveUrl": "https://timelessmediabox.com/",
+      "githubUrl": "#"
+    },
+    {
       "title": "The Ball Hall",
       "description": "A high-performance custom web platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
       "tags": ["Bubble.io", "No-Code", "Web App", "UI/UX"],

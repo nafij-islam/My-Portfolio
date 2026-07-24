@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 11,
+    title: "Timeless Media Box",
+    description:
+      "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+    image: "/timelapess.png",
+    liveUrl: "https://timelessmediabox.com/",
+    githubUrl: "#",
+    category: "Shopify",
+  },
+  {
     id: 10,
     title: "The Ball Hall",
     description:

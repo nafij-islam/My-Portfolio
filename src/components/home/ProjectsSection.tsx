@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 10,
+    title: "Timeless Media Box",
+    description: "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind"],
+    image: "/timelapess.png",
+    liveUrl: "https://timelessmediabox.com/",
+    githubUrl: "#",
+  },
+  {
     id: 9,
     title: "The Ball Hall",
     description: "A high-performance custom web platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
