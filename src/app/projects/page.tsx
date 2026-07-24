@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 10,
+    title: "The Ball Hall",
+    description:
+      "A high-performance custom web platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
+    tags: ["Bubble.io", "No-Code", "Web App", "UI/UX"],
+    image: "/growshow.png",
+    liveUrl: "https://theballhall.com/",
+    githubUrl: "#",
+    category: "Bubble.io",
+  },
+  {
     id: 9,
     title: "Try Nurova",
     description:

@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 9,
+    title: "The Ball Hall",
+    description: "A high-performance custom web platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
+    tags: ["Bubble.io", "No-Code", "Web App", "UI/UX"],
+    image: "/growshow.png",
+    liveUrl: "https://theballhall.com/",
+    githubUrl: "#",
+  },
+  {
     id: 6,
     title: "Try Nurova",
     description: "A custom-designed, premium Shopify store built for Nurova, showcasing luxury branding, custom layouts, and custom Liquid theme development.",
