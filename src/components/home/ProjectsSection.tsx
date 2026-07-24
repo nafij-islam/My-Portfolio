@@ -11,7 +11,7 @@ const projects = [
     title: "OneMat",
     description: "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored layouts, smooth animations, and custom Liquid templates.",
     tags: ["Shopify", "Liquid", "Theme Dev", "CSS"],
-    image: "/onemat.png",
+    image: "/onemat.jpg",
     liveUrl: "https://onemat.world/",
     githubUrl: "#",
   },
