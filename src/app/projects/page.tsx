@@ -1,11 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ExternalLink, Github } from "lucide-react";
 
-const allProjects = [
+const staticProjects = [
   {
     id: 12,
     title: "Move Store",
@@ -156,6 +158,38 @@ const item = {
 };
 
 export default function Projects() {
+  const [allProjects, setAllProjects] = useState(staticProjects);
+
+  useEffect(() => {
+    async function loadProjects() {
+      try {
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*")
+          .order("created_at", { ascending: false });
+        
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+          const formatted = data.map((item: any) => ({
+            id: item.id,
+            title: item.title,
+            description: item.description,
+            tags: item.tags || [],
+            image: item.image,
+            liveUrl: item.live_url || "#",
+            githubUrl: item.github_url || "#",
+            category: item.category || "Shopify",
+          }));
+          setAllProjects(formatted);
+        }
+      } catch (err) {
+        console.warn("Could not load dynamic projects, using static fallbacks:", err);
+      }
+    }
+    loadProjects();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />

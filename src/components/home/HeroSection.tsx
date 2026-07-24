@@ -1,11 +1,43 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import { ArrowDown, Code2, ShoppingBag, Database, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const HeroSection = () => {
+  const [heroTitle, setHeroTitle] = useState("Hi, I'm Nafij");
+  const [heroSubtitle, setHeroSubtitle] = useState("I Build Digital Experiences");
+
+  useEffect(() => {
+    async function loadHeroSettings() {
+      try {
+        const { data, error } = await supabase
+          .from("portfolio_settings")
+          .select("*")
+          .in("key", ["hero_title", "hero_subtitle"]);
+        
+        if (error) throw error;
+        
+        if (data) {
+          data.forEach((item) => {
+            if (item.key === "hero_title" && item.value) {
+              setHeroTitle(item.value);
+            }
+            if (item.key === "hero_subtitle" && item.value) {
+              setHeroSubtitle(item.value);
+            }
+          });
+        }
+      } catch (err) {
+        console.warn("Could not load dynamic hero settings, using fallbacks:", err);
+      }
+    }
+    loadHeroSettings();
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
@@ -34,11 +66,18 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
           >
-            Hi, I'm{" "}
-            <span className="text-gradient">Nafij</span>
+            {heroTitle.includes("Nafij") ? (
+              <>
+                {heroTitle.split("Nafij")[0]}
+                <span className="text-gradient">Nafij</span>
+                {heroTitle.split("Nafij")[1]}
+              </>
+            ) : (
+              heroTitle
+            )}
             <br />
             <span className="text-muted-foreground">
-              I Build Digital Experiences
+              {heroSubtitle}
             </span>
           </motion.h1>
 

@@ -1,11 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+const staticProjects = [
   {
     id: 11,
     title: "Move Store",
@@ -105,6 +107,38 @@ const item = {
 };
 
 export const ProjectsSection = () => {
+  const [projects, setProjects] = useState(staticProjects);
+
+  useEffect(() => {
+    async function loadProjects() {
+      try {
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*")
+          .order("created_at", { ascending: false });
+        
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+          const formatted = data.map((item: any) => ({
+            id: item.id,
+            title: item.title,
+            description: item.description,
+            tags: item.tags || [],
+            image: item.image,
+            liveUrl: item.live_url || "#",
+            githubUrl: item.github_url || "#",
+          }));
+          // Display top 6 projects on homepage featured section
+          setProjects(formatted.slice(0, 6));
+        }
+      } catch (err) {
+        console.warn("Could not load dynamic projects, using static fallbacks:", err);
+      }
+    }
+    loadProjects();
+  }, []);
+
   return (
     <section className="section-padding">
       <div className="container mx-auto px-6">

@@ -1,5 +1,6 @@
 import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
+import { supabase } from "@/lib/supabase";
 import portfolioData from "@/data/portfolio-info.json";
 
 // Allow streaming responses up to 30 seconds
@@ -8,6 +9,46 @@ export const maxDuration = 30;
 export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
+
+    // Query dynamic data from Supabase
+    let dbProjects: any[] = [];
+    let dbSettings: Record<string, string> = {};
+
+    try {
+      const { data: projects, error: projectsError } = await supabase
+        .from("projects")
+        .select("*")
+        .order("created_at", { ascending: false });
+      
+      if (!projectsError && projects) {
+        dbProjects = projects;
+      }
+
+      const { data: settings, error: settingsError } = await supabase
+        .from("portfolio_settings")
+        .select("*");
+      
+      if (!settingsError && settings) {
+        settings.forEach((item) => {
+          dbSettings[item.key] = item.value;
+        });
+      }
+    } catch (err) {
+      console.warn("Supabase load failed for chat route, using static data:", err);
+    }
+
+    // Merge static and dynamic context
+    const finalPortfolioData = {
+      ...portfolioData,
+      projects: dbProjects.length > 0 ? dbProjects.map(p => ({
+        title: p.title,
+        description: p.description,
+        tags: p.tags || [],
+        liveUrl: p.live_url || "#",
+        githubUrl: p.github_url || "#"
+      })) : portfolioData.projects,
+      settings: dbSettings
+    };
 
     // Create system prompt using the portfolio JSON data
     const systemPrompt = `
@@ -22,7 +63,7 @@ CRITICAL RULES:
 5. Provide clickable markdown links when sharing projects or contact channels (e.g., "[Link Text](url)"). Do not leave URLs as plaintext.
 
 NAFIJ'S PORTFOLIO DATA (A-Z):
-${JSON.stringify(portfolioData, null, 2)}
+${JSON.stringify(finalPortfolioData, null, 2)}
 `;
 
     // Stream response from Gemini 3.5 Flash (fast, smart, agentic)
