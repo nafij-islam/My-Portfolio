@@ -52,6 +52,13 @@
   ],
   "projects": [
     {
+      "title": "Move Store",
+      "description": "A custom-designed, premium Shopify e-commerce store built for Move Store in the Netherlands, showcasing product search, fluid checkouts, and custom Liquid widgets.",
+      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+      "liveUrl": "https://www.movestore.nl/",
+      "githubUrl": "#"
+    },
+    {
       "title": "Timeless Media Box",
       "description": "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
       "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],

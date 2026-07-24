@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 12,
+    title: "Move Store",
+    description:
+      "A custom-designed, premium Shopify e-commerce store built for Move Store in the Netherlands, showcasing product search, fluid checkouts, and custom Liquid widgets.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+    image: "/movestore.png",
+    liveUrl: "https://www.movestore.nl/",
+    githubUrl: "#",
+    category: "Shopify",
+  },
+  {
     id: 11,
     title: "Timeless Media Box",
     description:

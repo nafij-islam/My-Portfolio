@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 11,
+    title: "Move Store",
+    description: "A custom-designed, premium Shopify e-commerce store built for Move Store in the Netherlands, showcasing product search, fluid checkouts, and custom Liquid widgets.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind"],
+    image: "/movestore.png",
+    liveUrl: "https://www.movestore.nl/",
+    githubUrl: "#",
+  },
+  {
     id: 10,
     title: "Timeless Media Box",
     description: "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
