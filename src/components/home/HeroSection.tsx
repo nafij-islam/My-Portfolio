@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Code2, ShoppingBag } from "lucide-react";
+import { ArrowDown, Code2, ShoppingBag, Database, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -70,7 +70,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex items-center justify-center gap-8"
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-8"
           >
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <Code2 className="text-primary" size={24} />
@@ -80,10 +80,24 @@ export const HeroSection = () => {
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
+              <Database className="text-primary" size={24} />
+              <div className="text-left">
+                <p className="font-display font-semibold">Backend</p>
+                <p className="text-xs text-muted-foreground">Node.js & APIs</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <ShoppingBag className="text-primary" size={24} />
               <div className="text-left">
                 <p className="font-display font-semibold">Shopify</p>
                 <p className="text-xs text-muted-foreground">Expert Partner</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
+              <Globe className="text-primary" size={24} />
+              <div className="text-left">
+                <p className="font-display font-semibold">Bubble.io</p>
+                <p className="text-xs text-muted-foreground">No-Code Dev</p>
               </div>
             </div>
           </motion.div>
