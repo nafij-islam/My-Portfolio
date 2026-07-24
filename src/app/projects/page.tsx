@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 8,
+    title: "Catch 'Em Claw Arcade",
+    description:
+      "A custom-designed, premium Shopify store for claw arcade machines featuring custom catalog navigation, collection grids, and responsive layouts.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Custom UI", "UX"],
+    image: "/healthcare.png",
+    liveUrl: "https://catchemclawarcade.com/",
+    githubUrl: "#",
+    category: "Shopify",
+  },
+  {
     id: 7,
     title: "OneMat",
     description:

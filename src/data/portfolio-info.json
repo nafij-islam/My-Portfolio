@@ -52,6 +52,13 @@
   ],
   "projects": [
     {
+      "title": "Catch 'Em Claw Arcade",
+      "description": "A custom-designed, premium Shopify store for claw arcade machines featuring custom catalog navigation, collection grids, and responsive layouts.",
+      "tags": ["Shopify", "Liquid", "Theme Dev", "Custom UI", "UX"],
+      "liveUrl": "https://catchemclawarcade.com/",
+      "githubUrl": "#"
+    },
+    {
       "title": "OneMat",
       "description": "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored collection layouts, smooth animations, and custom Liquid development.",
       "tags": ["Shopify", "Liquid", "Theme Dev", "CSS", "UI/UX"],

@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 5,
+    title: "Catch 'Em Claw Arcade",
+    description: "A custom-designed, premium Shopify store for claw arcade machines featuring custom catalog navigation, collection grids, and responsive layouts.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Custom UI"],
+    image: "/healthcare.png",
+    liveUrl: "https://catchemclawarcade.com/",
+    githubUrl: "#",
+  },
+  {
     id: 4,
     title: "OneMat",
     description: "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored layouts, smooth animations, and custom Liquid templates.",
