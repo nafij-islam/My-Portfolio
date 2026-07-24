@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 9,
+    title: "Try Nurova",
+    description:
+      "A custom-designed, premium Shopify store built for Nurova, showcasing luxury branding, custom layouts, and custom Liquid theme development.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+    image: "/trynurova.png",
+    liveUrl: "https://trynurova.com/",
+    githubUrl: "#",
+    category: "Shopify",
+  },
+  {
     id: 8,
     title: "Catch 'Em Claw Arcade",
     description:

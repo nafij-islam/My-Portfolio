@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 6,
+    title: "Try Nurova",
+    description: "A custom-designed, premium Shopify store built for Nurova, showcasing luxury branding, custom layouts, and custom Liquid theme development.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "Tailwind"],
+    image: "/trynurova.png",
+    liveUrl: "https://trynurova.com/",
+    githubUrl: "#",
+  },
+  {
     id: 5,
     title: "Catch 'Em Claw Arcade",
     description: "A custom-designed, premium Shopify store for claw arcade machines featuring custom catalog navigation, collection grids, and responsive layouts.",
