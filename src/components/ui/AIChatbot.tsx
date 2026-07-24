@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bot, X, Send, Sparkles } from "lucide-react";
+import gsap from "gsap";
 
 // Suggestions to help the user get started
 const SUGGESTIONS = [
@@ -25,6 +26,31 @@ export default function AIChatbot() {
   const [isLoading, setIsLoading] = useState(false);
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  // Floating & Glowing animation using GSAP (same style as WhatsAppFloat)
+  useEffect(() => {
+    const el = buttonRef.current;
+    if (!el) return;
+
+    // Floating animation
+    gsap.to(el, {
+      y: -10,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    // Soft glowing pulse (purple shadow to match primary button theme)
+    gsap.to(el, {
+      boxShadow: "0px 0px 25px 6px rgba(168,85,247,0.6)",
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  }, []);
 
   // Auto-scroll to the bottom of messages
   useEffect(() => {
@@ -148,6 +174,7 @@ export default function AIChatbot() {
     <>
       {/* Floating Toggle Button */}
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="fixed lg:bottom-40 bottom-24 lg:right-20 right-5 z-[999] bg-primary text-primary-foreground p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 flex items-center justify-center border border-primary/20 glow-primary"
         aria-label="Toggle AI Assistant"
