@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import Loader from "@/components/ui/Loader";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
+import AIChatbot from "@/components/ui/AIChatbot";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -72,6 +73,7 @@ export default function AppProviders({ children }: { children: React.ReactNode }
           <div ref={pageRef}>
             {children}
             <WhatsAppFloat />
+            <AIChatbot />
           </div>
         )}
       </TooltipProvider>
