@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const allProjects = [
   {
+    id: 7,
+    title: "OneMat",
+    description:
+      "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored layouts, smooth animations, and custom Liquid templates.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "CSS", "UI/UX"],
+    image: "/onemat.png",
+    liveUrl: "https://onemat.world/",
+    githubUrl: "#",
+    category: "Shopify",
+  },
+  {
     id: 1,
     title: "E-Commerce Store",
     description:

@@ -52,6 +52,13 @@
   ],
   "projects": [
     {
+      "title": "OneMat",
+      "description": "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored collection layouts, smooth animations, and custom Liquid development.",
+      "tags": ["Shopify", "Liquid", "Theme Dev", "CSS", "UI/UX"],
+      "liveUrl": "https://onemat.world/",
+      "githubUrl": "#"
+    },
+    {
       "title": "E-Commerce Store",
       "description": "A modern E-Commerce store built with React and Tailwind CSS featuring dynamic state, Tailwind layout, and TanStack query integrations.",
       "tags": ["HTML", "CSS", "JavaScript", "Tailwind", "TanStack"],

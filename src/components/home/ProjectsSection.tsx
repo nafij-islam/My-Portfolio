@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 4,
+    title: "OneMat",
+    description: "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored layouts, smooth animations, and custom Liquid templates.",
+    tags: ["Shopify", "Liquid", "Theme Dev", "CSS"],
+    image: "/onemat.png",
+    liveUrl: "https://onemat.world/",
+    githubUrl: "#",
+  },
+  {
     id: 1,
     title: "E-Commerce Store",
     description: "A modern E-Coomerce store with React and TailWind CSS",
