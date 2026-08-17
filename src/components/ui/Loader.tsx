@@ -12,7 +12,7 @@ const Loader = ({ onFinish }) => {
       onComplete: () => {
         gsap.to(loaderRef.current, {
           opacity: 0,
-          duration: 0.6,
+          duration: 0.35,
           ease: "power2.inOut",
           onComplete: onFinish,
         });
@@ -22,8 +22,8 @@ const Loader = ({ onFinish }) => {
     // Text entrance
     tl.fromTo(
       textRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 1 }
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.5 }
     )
 
       // Progress line animation
@@ -32,16 +32,16 @@ const Loader = ({ onFinish }) => {
         { scaleX: 0 },
         {
           scaleX: 1,
-          duration: 1.5,
+          duration: 0.7,
           transformOrigin: "left center",
         },
-        "-=0.5"
+        "-=0.2"
       )
 
       // Subtle pulse before exit
       .to(textRef.current, {
-        opacity: 0.6,
-        duration: 0.3,
+        opacity: 0.7,
+        duration: 0.15,
         yoyo: true,
         repeat: 1,
       });
