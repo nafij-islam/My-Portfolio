@@ -153,7 +153,7 @@ export default function About() {
                 <div className="aspect-square rounded-3xl overflow-hidden glass p-4">
                   <img
                     src="/Nafij-Islam.png"
-                    alt="Nafij - Frontend & Shopify Developer"
+                    alt="Nafij Islam - Full-Stack Developer, Shopify & Bubble.io Expert"
                     className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
@@ -293,7 +293,7 @@ export default function About() {
                 THE MISSION
               </h2>
               <div>
-                <img className="rounded-2xl w-full" src="/bannerimg.jpeg" alt="" />
+                <img className="rounded-2xl w-full" src="/bannerimg.jpeg" alt="Nafij Islam Web Development & Digital Mission" />
               </div>
             </div>
           </div>

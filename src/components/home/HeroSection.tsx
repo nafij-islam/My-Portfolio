@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const HeroSection = () => {
-  const [heroTitle, setHeroTitle] = useState("Hi, I'm Nafij");
+  const [heroTitle, setHeroTitle] = useState("Hi, I'm Nafij Islam");
   const [heroSubtitle, setHeroSubtitle] = useState("I Build Digital Experiences");
 
   useEffect(() => {

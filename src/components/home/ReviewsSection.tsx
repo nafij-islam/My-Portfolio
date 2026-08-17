@@ -100,7 +100,7 @@ export const ReviewsSection = () => {
               <div className="flex items-center gap-4">
                 <img
                   src={review.avatar}
-                  alt={review.name}
+                  alt={`${review.name} - Testimonial for Nafij Islam`}
                   className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>

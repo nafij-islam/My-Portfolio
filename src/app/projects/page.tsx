@@ -229,7 +229,7 @@ export default function Projects() {
                   <div className="relative overflow-hidden aspect-video">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`Nafij Islam portfolio project – ${project.title}`}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute top-4 left-4">

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, ShoppingBag, Palette, Rocket, ArrowRight } from "lucide-react";
+import { Code2, ShoppingBag, Palette, Rocket, ArrowRight, Database } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -12,12 +12,12 @@ const services = [
       "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
     features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
   },
-    {
-    icon: Code2,
-    title: "Frontend Development",
+  {
+    icon: Database,
+    title: "Full-Stack & Backend Development",
     description:
-      "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
-    features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
+      "Developing robust APIs, database architecture, and full-stack web applications with modern stacks.",
+    features: ["Node.js & APIs", "Database Systems", "Full-Stack Architecture", "RESTful Services"],
   },
   {
     icon: ShoppingBag,
