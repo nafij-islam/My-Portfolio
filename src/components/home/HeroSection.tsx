@@ -39,14 +39,14 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-24 md:py-32">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 pt-20 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
           >
             <Button size="lg" className="glow-primary" asChild>
               <Link href="/projects">View My Work</Link>
@@ -108,52 +108,52 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-4 md:gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto mb-10"
           >
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
-              <Code2 className="text-primary" size={24} />
+              <Code2 className="text-primary shrink-0" size={22} />
               <div className="text-left">
                 <p className="font-display font-semibold text-sm">Frontend Development</p>
                 <p className="text-xs text-muted-foreground">React & Next.js</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
-              <Database className="text-primary" size={24} />
+              <Database className="text-primary shrink-0" size={22} />
               <div className="text-left">
                 <p className="font-display font-semibold text-sm">Backend Development</p>
                 <p className="text-xs text-muted-foreground">Node.js & APIs</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
-              <ShoppingBag className="text-primary" size={24} />
+              <ShoppingBag className="text-primary shrink-0" size={22} />
               <div className="text-left">
                 <p className="font-display font-semibold text-sm">Shopify Development</p>
                 <p className="text-xs text-muted-foreground">Custom Themes & Stores</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
-              <Globe className="text-primary" size={24} />
+              <Globe className="text-primary shrink-0" size={22} />
               <div className="text-left">
                 <p className="font-display font-semibold text-sm">Bubble.io Development</p>
                 <p className="text-xs text-muted-foreground">SaaS & No-Code Apps</p>
               </div>
             </div>
           </motion.div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex justify-center pt-2"
           >
-            <ArrowDown className="text-muted-foreground" size={24} />
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              <ArrowDown className="text-muted-foreground" size={24} />
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
