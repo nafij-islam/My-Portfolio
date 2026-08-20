@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { SkillsSection } from "@/components/home/SkillsSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
+import { WhyChooseMeSection } from "@/components/home/WhyChooseMeSection";
 import { ProjectsSection } from "@/components/home/ProjectsSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <ServicesSection />
+        <WhyChooseMeSection />
         <ReviewsSection />
       </main>
       <Footer />

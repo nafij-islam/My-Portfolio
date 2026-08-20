@@ -1,58 +1,60 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, ShoppingBag, Palette, Rocket, ArrowRight, Database } from "lucide-react";
+import { 
+  Code2, 
+  ShoppingBag, 
+  Palette, 
+  Database, 
+  Globe, 
+  Layers, 
+  ArrowRight 
+} from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Code2,
+    icon: Layers,
+    title: "Full Stack Web Development",
+    description:
+      "I build complete web applications with modern frontend interfaces, powerful backend systems, secure databases, and scalable architecture.",
+    features: ["React & Next.js", "Node.js & Express", "Database Architecture", "Scalable Systems"],
+  },
+  {
+    icon: Palette,
     title: "Frontend Development",
     description:
-      "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
-    features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
+      "I create responsive, fast, and interactive user interfaces using React, Next.js, JavaScript, and modern frontend technologies.",
+    features: ["React.js & Next.js", "TypeScript", "Tailwind CSS", "Performance & Core Web Vitals"],
   },
   {
     icon: Database,
-    title: "Full-Stack & Backend Development",
+    title: "Backend Development",
     description:
-      "Developing robust APIs, database architecture, and full-stack web applications with modern stacks.",
-    features: ["Node.js & APIs", "Database Systems", "Full-Stack Architecture", "RESTful Services"],
+      "I develop secure APIs, databases, authentication systems, and backend solutions for modern applications.",
+    features: ["RESTful & GraphQL APIs", "Database Management", "Authentication & Security", "Server Integration"],
   },
   {
     icon: ShoppingBag,
     title: "Shopify Development",
     description:
-      "Custom Shopify themes, apps, and integrations to power your e-commerce business.",
-    features: ["Custom Themes", "Liquid Development", "App Integration", "Store Setup"],
+      "I help businesses build professional Shopify stores with custom themes, integrations, optimization, and e-commerce solutions.",
+    features: ["Custom Liquid Themes", "App Integration", "Store Speed Optimization", "Conversion UX Design"],
   },
   {
-    icon: Palette,
-    title: "UI/UX Implementation",
+    icon: Globe,
+    title: "Bubble.io Development",
     description:
-      "Translating designs into pixel-perfect, accessible, and interactive user interfaces.",
-    features: ["Figma to Code", "Responsive Design", "Animations", "Accessibility"],
+      "I create scalable no-code applications, SaaS platforms, dashboards, and business automation systems using Bubble.io.",
+    features: ["SaaS Platforms", "Complex Workflows", "Custom Database Design", "API Connectors"],
   },
   {
-    icon: Rocket,
-    title: "Web Performance",
+    icon: Code2,
+    title: "Custom Software Development",
     description:
-      "Optimizing websites for speed, SEO, and exceptional user experience across all devices.",
-    features: ["Core Web Vitals", "SEO Optimization", "Code Splitting", "Image Optimization"],
+      "I transform business ideas into custom software solutions designed for performance and growth.",
+    features: ["SaaS Web Applications", "Digital Products", "Automation Systems", "Custom Web Solutions"],
   },
-   {
-  icon: Code2,
-  title: "Bubble Web & App Performance",
-  description:
-    "Optimizing websites and mobile apps for blazing-fast speed, SEO, smooth performance, and exceptional user experience across all devices.",
-  features: [
-    "Core Web Vitals",
-    "SEO Optimization",
-    "App Performance",
-    "Code Splitting",
-    "Image Optimization"
-  ]
-}
 ];
 
 const container = {
@@ -60,7 +62,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -88,8 +90,7 @@ export const ServicesSection = () => {
             Services I Offer
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            From concept to deployment, I provide end-to-end development services
-            tailored to your needs.
+            From concept to deployment, I provide end-to-end development services tailored to help businesses scale globally.
           </p>
         </motion.div>
 
@@ -98,26 +99,30 @@ export const ServicesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6 lg:gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {services.map((service) => (
             <motion.div
               key={service.title}
               variants={item}
-              className="group p-8 rounded-2xl glass hover:border-primary/50 transition-all duration-300"
+              className="group p-8 rounded-2xl glass hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6">
-                <service.icon className="text-primary-foreground" size={28} />
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 shadow-lg">
+                  <service.icon className="text-primary-foreground" size={28} />
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-display font-semibold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-6">{service.description}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 pt-4 border-t border-white/5">
                 {service.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                    className="flex items-center gap-2 text-xs text-muted-foreground"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                     {feature}

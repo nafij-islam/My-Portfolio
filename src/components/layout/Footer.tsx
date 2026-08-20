@@ -23,7 +23,7 @@ export const Footer = () => {
               <span className="text-gradient">Nafij</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Frontend & Shopify Developer
+              Full-Stack & Shopify Developer
             </p>
           </div>
 

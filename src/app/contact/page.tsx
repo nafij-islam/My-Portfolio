@@ -86,11 +86,10 @@ export default function Contact() {
                 Contact
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                Let's <span className="text-gradient">Connect</span>
+                Let's Build Something <span className="text-gradient">Amazing Together</span>
               </h1>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Have a project in mind or just want to chat? I'm always open to
-                discussing new opportunities.
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+                Looking for a professional web developer, full stack developer, Shopify developer, or Bubble.io expert? Let's discuss your project and create a powerful digital solution.
               </p>
             </motion.div>
 
@@ -224,7 +223,7 @@ export default function Contact() {
                   >
                     {isSubmitting ? "Sending..." : (
                       <>
-                        Send Message <Send className="ml-2" size={18} />
+                        Start Your Project <Send className="ml-2" size={18} />
                       </>
                     )}
                   </Button>

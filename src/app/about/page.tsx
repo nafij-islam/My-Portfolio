@@ -27,10 +27,10 @@ const journeyItems = [
   {
     id: 1,
     year: "2024 - Present",
-    title: "Frontend Developer",
+    title: "Full-Stack Developer",
     company: "Freelance & Personal Projects",
     description:
-      "Building responsive and modern web applications using React, Next.js, Tailwind CSS, and modern frontend technologies.",
+      "Building responsive and modern web applications using React, Next.js, Tailwind CSS, and robust full-stack technologies.",
     icon: Code2,
     color: "from-orange-500 to-amber-500",
   },
@@ -111,23 +111,16 @@ export default function About() {
                   <span className="text-gradient">Web Experiences</span>
                 </h1>
 
-                <p className="text-muted-foreground text-lg mb-6">
-                  Hi, I'm Nafij — a passionate Frontend, Backend, Shopify, and
-                  Bubble.io Developer based in Bangladesh. I specialize in
-                  building modern, responsive, and high-performance web
-                  applications, e-commerce stores, and scalable no-code
-                  solutions. I love creating clean user experiences with modern
-                  technologies and turning ideas into real digital products.
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                  I am Nafij Islam, a passionate Full Stack Developer and Web Developer from Bangladesh. I specialize in creating modern, fast, and scalable digital solutions using the latest web technologies.
                 </p>
 
-                <p className="text-muted-foreground mb-8">
-                  My journey started with a deep curiosity about how modern
-                  websites and applications are built, which gradually turned
-                  into a passion for web development and digital product
-                  creation. I enjoy building clean, responsive, and
-                  user-friendly experiences using modern technologies, Shopify,
-                  and Bubble.io. I believe in clean code, creative design, and
-                  developing solutions that provide real value to users.
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  My expertise includes frontend development, backend development, Shopify development, Bubble.io applications, SaaS platforms, and custom web solutions.
+                </p>
+
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  I help startups, entrepreneurs, and businesses transform ideas into powerful digital products through clean code, modern design, and performance-focused development.
                 </p>
 
                 <div className="flex flex-wrap gap-4">

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   const [heroTitle, setHeroTitle] = useState("Hi, I'm Nafij Islam");
-  const [heroSubtitle, setHeroSubtitle] = useState("I Build Digital Experiences");
+  const [heroSubtitle, setHeroSubtitle] = useState("Full Stack Developer Creating Modern Digital Experiences");
 
   useEffect(() => {
     async function loadHeroSettings() {
@@ -55,8 +55,8 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">
-              Available for new projects
+            <span className="text-sm text-muted-foreground font-medium">
+              Available for freelance projects
             </span>
           </motion.div>
 
@@ -76,7 +76,7 @@ export const HeroSection = () => {
               heroTitle
             )}
             <br />
-            <span className="text-muted-foreground">
+            <span className="text-muted-foreground text-2xl md:text-4xl lg:text-5xl block mt-3 font-semibold">
               {heroSubtitle}
             </span>
           </motion.h1>
@@ -85,10 +85,9 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            A passionate Frontend Developer & Shopify Expert crafting beautiful,
-            performant websites and e-commerce solutions that drive results.
+            I am a Full Stack Developer and Web Developer specializing in React, Next.js, Shopify, and Bubble.io. I build modern websites, scalable web applications, SaaS platforms, and e-commerce solutions that help businesses grow online.
           </motion.p>
 
           <motion.div
@@ -101,7 +100,7 @@ export const HeroSection = () => {
               <Link href="/projects">View My Work</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/contact">Get In Touch</Link>
+              <Link href="/contact">Hire Me</Link>
             </Button>
           </motion.div>
 
@@ -109,34 +108,34 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center gap-4 md:gap-8"
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-6"
           >
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <Code2 className="text-primary" size={24} />
               <div className="text-left">
-                <p className="font-display font-semibold">Frontend</p>
+                <p className="font-display font-semibold text-sm">Frontend Development</p>
                 <p className="text-xs text-muted-foreground">React & Next.js</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <Database className="text-primary" size={24} />
               <div className="text-left">
-                <p className="font-display font-semibold">Backend</p>
+                <p className="font-display font-semibold text-sm">Backend Development</p>
                 <p className="text-xs text-muted-foreground">Node.js & APIs</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <ShoppingBag className="text-primary" size={24} />
               <div className="text-left">
-                <p className="font-display font-semibold">Shopify</p>
-                <p className="text-xs text-muted-foreground">Expert Partner</p>
+                <p className="font-display font-semibold text-sm">Shopify Development</p>
+                <p className="text-xs text-muted-foreground">Custom Themes & Stores</p>
               </div>
             </div>
             <div className="flex items-center gap-3 px-4 py-3 glass rounded-xl">
               <Globe className="text-primary" size={24} />
               <div className="text-left">
-                <p className="font-display font-semibold">Bubble.io</p>
-                <p className="text-xs text-muted-foreground">No-Code Dev</p>
+                <p className="font-display font-semibold text-sm">Bubble.io Development</p>
+                <p className="text-xs text-muted-foreground">SaaS & No-Code Apps</p>
               </div>
             </div>
           </motion.div>

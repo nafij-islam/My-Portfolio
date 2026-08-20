@@ -48,11 +48,10 @@ export const ContactSection = () => {
             Get In Touch
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-            Let's Work Together
+            Let's Build Something Amazing Together
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message
-            and let's create something amazing together.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            Looking for a professional web developer, full stack developer, Shopify developer, or Bubble.io expert? Let's discuss your project and create a powerful digital solution.
           </p>
         </motion.div>
 
@@ -155,7 +154,7 @@ export const ContactSection = () => {
                   "Sending..."
                 ) : (
                   <>
-                    Send Message <Send className="ml-2" size={18} />
+                    Start Your Project <Send className="ml-2" size={18} />
                   </>
                 )}
               </Button>

@@ -1,11 +1,11 @@
 {
   "personal": {
     "name": "Nafij Islam",
-    "nickname": "Saharian Nafis",
-    "title": "Frontend Developer, Backend Developer & Shopify Expert",
-    "location": "Dhaka, Bangladesh",
-    "experience": "Working actively as a Frontend & Backend Developer and Shopify Expert since 2024. Skilled in modern web ecosystems and no-code/low-code tools like Bubble.io.",
-    "about": "Nafij is a passionate Developer and Shopify Partner who crafts highly performant, custom-tailored websites and e-commerce stores. He is dedicated to building clean, pixel-perfect user interfaces, custom Shopify Liquid templates, robust web applications, and fast Bubble.io mobile & web platforms. He focuses on client satisfaction, performance optimization, and clean typography.",
+    "brand": "Nafij.",
+    "title": "Full Stack Developer | Web Developer | Shopify & Bubble.io Expert",
+    "location": "Bangladesh",
+    "experience": "Working actively as a Full Stack Developer, Web Developer, and Shopify / Bubble.io Expert since 2024. Building modern web applications, scalable SaaS platforms, and high-converting e-commerce stores for international clients.",
+    "about": "I am Nafij Islam, a passionate Full Stack Developer and Web Developer from Bangladesh. I specialize in creating modern, fast, and scalable digital solutions using the latest web technologies. My expertise includes frontend development, backend development, Shopify development, Bubble.io applications, SaaS platforms, and custom web solutions. I help startups, entrepreneurs, and businesses transform ideas into powerful digital products through clean code, modern design, and performance-focused development.",
     "stats": {
       "projectsCompleted": "50+",
       "happyClients": "40+",
@@ -14,105 +14,157 @@
     }
   },
   "skills": [
-    { "name": "Frontend Development", "level": 95, "details": "React, Next.js, HTML5, CSS3, Tailwind CSS, TypeScript" },
-    { "name": "React / Next.js", "level": 90, "details": "App Router, Page Router, SSR, SSG, State Management, API integration" },
-    { "name": "Responsive Design", "level": 95, "details": "Mobile-first, fluid layouts, grid/flexbox, cross-browser compatibility" },
-    { "name": "JavaScript / TypeScript", "level": 80, "details": "ES6+, OOP, asynchronous programming, typed code bases" },
-    { "name": "Shopify Development", "level": 95, "details": "Custom Liquid theme dev, app integrations, store setups, customization" },
-    { "name": "Bubble.io Development", "level": 95, "details": "No-code/low-code full-stack web and mobile apps, databases, API connectors" },
-    { "name": "Backend Development", "level": 75, "details": "Node.js, Express, databases, REST APIs" },
-    { "name": "Git & GitHub", "level": 90, "details": "Version control, collaboration, branches, pull requests" }
+    { "category": "Frontend Development", "name": "React.js & Next.js", "level": 95, "details": "App Router, SSR, SSG, State Management, API integration" },
+    { "category": "Frontend Development", "name": "JavaScript & TypeScript", "level": 90, "details": "Modern ES6+, Typed Codebases, Asynchronous Architecture" },
+    { "category": "Frontend Development", "name": "HTML5, CSS3 & Tailwind CSS", "level": 95, "details": "Responsive Design, Pixel-Perfect UI, Fluid Layouts" },
+    { "category": "Backend Development", "name": "Node.js & Express", "level": 85, "details": "REST APIs, Server Integration, Middleware Architecture" },
+    { "category": "Backend Development", "name": "Database Architecture & Auth", "level": 85, "details": "PostgreSQL, Supabase, MongoDB, Authentication Systems" },
+    { "category": "E-commerce", "name": "Shopify Development & Liquid", "level": 95, "details": "Custom Liquid Themes, App Integration, Store Speed, Conversion UX" },
+    { "category": "No-Code / SaaS", "name": "Bubble.io SaaS Development", "level": 95, "details": "Full-Stack No-Code Apps, Complex Workflows, Database Tuning, API Connectors" },
+    { "category": "Programming & Tools", "name": "Git & GitHub Workflow", "level": 90, "details": "Version Control, CI/CD, Deployment, Agile Problem Solving" }
   ],
   "services": [
     {
+      "id": 1,
+      "title": "Full Stack Web Development",
+      "description": "I build complete web applications with modern frontend interfaces, powerful backend systems, secure databases, and scalable architecture.",
+      "features": ["React & Next.js", "Node.js & Express", "Database Architecture", "RESTful & GraphQL APIs"]
+    },
+    {
+      "id": 2,
       "title": "Frontend Development",
-      "description": "Building modern, responsive websites using React, Next.js, and cutting-edge frontend technologies.",
-      "features": ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"]
+      "description": "I create responsive, fast, and interactive user interfaces using React, Next.js, JavaScript, and modern frontend technologies.",
+      "features": ["React.js & Next.js", "TypeScript", "Tailwind CSS", "Performance & Core Web Vitals"]
     },
     {
+      "id": 3,
+      "title": "Backend Development",
+      "description": "I develop secure APIs, databases, authentication systems, and backend solutions for modern applications.",
+      "features": ["RESTful APIs", "Database Management", "Authentication & Security", "Server Integration"]
+    },
+    {
+      "id": 4,
       "title": "Shopify Development",
-      "description": "Custom Shopify themes, apps, and integrations to power your e-commerce business.",
-      "features": ["Custom Themes", "Liquid Development", "App Integration", "Store Setup"]
+      "description": "I help businesses build professional Shopify stores with custom themes, integrations, optimization, and e-commerce solutions.",
+      "features": ["Custom Liquid Themes", "App Integration", "Store Speed Optimization", "Conversion UX Design"]
     },
     {
-      "title": "UI/UX Implementation",
-      "description": "Translating designs (e.g. Figma) into pixel-perfect, accessible, and interactive user interfaces.",
-      "features": ["Figma to Code", "Responsive Design", "Animations", "Accessibility"]
+      "id": 5,
+      "title": "Bubble.io Development",
+      "description": "I create scalable no-code applications, SaaS platforms, dashboards, and business automation systems using Bubble.io.",
+      "features": ["SaaS Platforms", "Complex Workflows", "Custom Database Design", "API Connectors"]
     },
     {
-      "title": "Web Performance",
-      "description": "Optimizing websites for speed, SEO, and exceptional user experience across all devices.",
-      "features": ["Core Web Vitals", "SEO Optimization", "Code Splitting", "Image Optimization"]
+      "id": 6,
+      "title": "Custom Software Development",
+      "description": "I transform business ideas into custom software solutions designed for performance and growth.",
+      "features": ["SaaS Web Applications", "Digital Products", "Automation Systems", "Custom Web Solutions"]
+    }
+  ],
+  "whyChooseMe": [
+    {
+      "title": "Modern Technology",
+      "description": "Utilizing industry-standard modern frameworks like React, Next.js, Shopify Liquid, and Bubble.io to build future-proof products."
     },
     {
-      "title": "Bubble Web & App Performance",
-      "description": "Optimizing websites and mobile apps built on Bubble.io for blazing-fast speed, SEO, smooth performance, and exceptional user experience.",
-      "features": ["Core Web Vitals", "SEO Optimization", "App Performance", "Bubble Database & API Tuning"]
+      "title": "Clean & Scalable Code",
+      "description": "Writing maintainable, modular, and performant code following software engineering best practices."
+    },
+    {
+      "title": "Business-Focused Development",
+      "description": "Aligning technical architecture directly with your business goals to drive user engagement, conversion, and revenue."
+    },
+    {
+      "title": "Responsive Design",
+      "description": "Ensuring pixel-perfect, fluid user experiences seamlessly across all screen sizes and mobile devices."
+    },
+    {
+      "title": "Fast Performance",
+      "description": "Optimizing Core Web Vitals, asset compression, and code splitting for blazing-fast loading speeds."
+    },
+    {
+      "title": "Reliable Communication",
+      "description": "Proactive updates, clear milestones, transparent feedback, and strictly on-time international project delivery."
     }
   ],
   "projects": [
     {
+      "id": 12,
       "title": "Move Store",
-      "description": "A custom-designed, premium Shopify e-commerce store built for Move Store in the Netherlands, showcasing product search, fluid checkouts, and custom Liquid widgets.",
-      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+      "problem": "Move Store in the Netherlands required a high-converting, localized e-commerce storefront with instant product search and rapid checkout.",
+      "solution": "Engineered a custom Shopify store with bespoke Liquid components, streamlined cart drawers, and responsive Tailwind styling.",
+      "result": "Boosted mobile conversion rate and delivered an ultra-fast shopping experience.",
+      "description": "Developed a high-performance custom Shopify e-commerce platform with bespoke Liquid sections, optimized UX, and conversion-focused checkout.",
+      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind CSS", "UX"],
+      "image": "/movestore.png",
       "liveUrl": "https://www.movestore.nl/",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "category": "Shopify"
     },
     {
+      "id": 11,
       "title": "Timeless Media Box",
-      "description": "A custom-designed, premium Shopify store designed for Timeless Media Box, featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
-      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+      "problem": "Required a luxury product showcase featuring seamless animations, bespoke product bundles, and high-end brand appeal.",
+      "solution": "Developed a custom Shopify theme with interactive sliders, fluid micro-interactions, and tailored Liquid templates.",
+      "result": "Significantly elevated brand prestige and maximized average order value.",
+      "description": "A custom-designed, premium Shopify store featuring elegant product showcases, smooth transitions, and custom Liquid integration.",
+      "tags": ["Shopify", "Liquid", "Custom Sections", "Tailwind CSS", "UX"],
+      "image": "/timelapess.png",
       "liveUrl": "https://timelessmediabox.com/",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "category": "Shopify"
     },
     {
+      "id": 10,
       "title": "The Ball Hall",
-      "description": "A high-performance custom web platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
-      "tags": ["Bubble.io", "No-Code", "Web App", "UI/UX"],
+      "problem": "Sports facility needed an end-to-end automated platform for court reservations, tournament scheduling, and player accounts.",
+      "solution": "Built a scalable SaaS web application on Bubble.io with interactive calendar workflows, payment gateways, and role-based dashboards.",
+      "result": "Automated 100% of facility scheduling and client management workflows without maintenance bottlenecks.",
+      "description": "A high-performance custom SaaS platform built on Bubble.io for sports facility scheduling, booking management, and interactive user dashboards.",
+      "tags": ["Bubble.io", "No-Code", "SaaS Platform", "Web App", "UI/UX"],
+      "image": "/growshow.png",
       "liveUrl": "https://theballhall.com/",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "category": "Bubble.io"
     },
     {
+      "id": 9,
       "title": "Try Nurova",
+      "problem": "High-ticket lifestyle brand needed custom visual storytelling sections and fast mobile loading times.",
+      "solution": "Architected custom Shopify Liquid sections with conversion-optimized layouts and lazy-loaded assets.",
+      "result": "Reduced bounce rates by 35% and increased add-to-cart conversions.",
       "description": "A custom-designed, premium Shopify store built for Nurova, showcasing luxury branding, custom layouts, and custom Liquid theme development.",
-      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind", "UX"],
+      "tags": ["Shopify", "Liquid", "Theme Dev", "Tailwind CSS", "UX"],
+      "image": "/trynurova.png",
       "liveUrl": "https://trynurova.com/",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "category": "Shopify"
     },
     {
+      "id": 8,
       "title": "Catch 'Em Claw Arcade",
+      "problem": "Specialized arcade machine seller required an intuitive catalog with inquiry workflows and custom specification grids.",
+      "solution": "Custom Shopify theme design with responsive machine specs, interactive gallery widgets, and lead generation forms.",
+      "result": "Streamlined B2B and B2C sales inquiries with structured technical specs.",
       "description": "A custom-designed, premium Shopify store for claw arcade machines featuring custom catalog navigation, collection grids, and responsive layouts.",
       "tags": ["Shopify", "Liquid", "Theme Dev", "Custom UI", "UX"],
+      "image": "/healthcare.png",
       "liveUrl": "https://catchemclawarcade.com/",
-      "githubUrl": "#"
+      "githubUrl": "#",
+      "category": "Shopify"
     },
     {
+      "id": 7,
       "title": "OneMat",
+      "problem": "Premium prayer mat brand needed a tailored direct-to-consumer store with custom bundle selections and smooth purchase flows.",
+      "solution": "Designed custom Shopify Liquid templates with interactive bundle builders, smooth animations, and optimized checkout.",
+      "result": "Achieved notable increases in average session duration and customer conversions.",
       "description": "A custom-designed, premium Shopify store selling high-quality prayer mats with tailored collection layouts, smooth animations, and custom Liquid development.",
-      "tags": ["Shopify", "Liquid", "Theme Dev", "CSS", "UI/UX"],
+      "tags": ["Shopify", "Liquid", "Theme Dev", "CSS Animations", "UI/UX"],
+      "image": "/onemat.jpg",
       "liveUrl": "https://onemat.world/",
-      "githubUrl": "#"
-    },
-    {
-      "title": "E-Commerce Store",
-      "description": "A modern E-Commerce store built with React and Tailwind CSS featuring dynamic state, Tailwind layout, and TanStack query integrations.",
-      "tags": ["HTML", "CSS", "JavaScript", "Tailwind", "TanStack"],
-      "liveUrl": "https://github.com",
-      "githubUrl": "https://github.com"
-    },
-    {
-      "title": "Quater Site",
-      "description": "A comprehensive analytics dashboard built with React and TypeScript.",
-      "tags": ["React", "TypeScript", "Tailwind"],
-      "liveUrl": "https://github.com",
-      "githubUrl": "https://github.com"
-    },
-    {
-      "title": "Fins Projects",
-      "description": "A creative portfolio for a photographer with stunning animations using GSAP and Framer Motion.",
-      "tags": ["Next.js", "Framer Motion", "GSAP"],
-      "liveUrl": "https://github.com",
-      "githubUrl": "https://github.com"
+      "githubUrl": "#",
+      "category": "Shopify"
     }
   ],
   "contact": {
@@ -121,10 +173,10 @@
     "whatsapp": "https://wa.me/8801633003462",
     "location": "Dhaka, Bangladesh",
     "socials": {
-      "github": "https://github.com",
+      "github": "https://github.com/nafij-islam",
       "linkedin": "https://linkedin.com",
       "twitter": "https://x.com/nafij_islam1",
-      "facebook": "https://www.facebook.com/saharian.nafis.256620",
+      "facebook": "https://www.facebook.com/nafijislam99",
       "youtube": "https://www.youtube.com/@LearnwithNafij"
     }
   }
