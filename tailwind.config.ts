@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "system-ui", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
+        display: ['"Times New Roman"', "Times", "Georgia", "serif"],
+        body: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        times: ['"Times New Roman"', "Times", "Georgia", "serif"],
+        inter: ["Inter", "system-ui", "-apple-system", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

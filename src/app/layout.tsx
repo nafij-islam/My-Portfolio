@@ -90,8 +90,9 @@ const jsonLd = {
       "description":
         "Nafij Islam is a Full Stack Developer and Web Developer specializing in React, Next.js, Shopify, Bubble.io, SaaS applications, and custom web development solutions.",
       "sameAs": [
-        "https://www.facebook.com/nafijislam99/",
-        "https://github.com/nafij-islam",
+        "https://www.facebook.com/nafijislam99",
+        "https://github.com/nafij-islam/",
+        "https://www.linkedin.com/in/nafij-islam/",
         "https://www.nafij.xyz/",
         "https://nafij.bro.bd/"
       ],

@@ -17,10 +17,10 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/nafij-islam/", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/nafij-islam/", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/nafij_islam1", label: "Twitter" },
-  { icon: Facebook, href: "https://www.facebook.com/saharian.nafis.256620", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/nafijislam99", label: "Facebook" },
   { icon: Youtube, href: "https://www.youtube.com/@LearnwithNafij", label: "Youtube" },
   { icon: Mail, href: "mailto:sahariannafis70@gmail.com", label: "Email" },
 ];
