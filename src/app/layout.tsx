@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     images: ["https://www.nafij.com/nafij-og.png"],
   },
   icons: {
-    icon: "/nafij-islam-logo.png",
-    shortcut: "/nafij-islam-logo.png",
-    apple: "/nafij-islam-logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
