@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -22,8 +23,15 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="font-display text-[30px] font-bold">
-            <span className="text-gradient">Nafij.</span>
+          <Link href="/" className="flex items-center group py-1">
+            <Image
+              src="/nafij-islam-logo.png"
+              alt="Nafij Islam"
+              width={160}
+              height={55}
+              priority
+              className="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}

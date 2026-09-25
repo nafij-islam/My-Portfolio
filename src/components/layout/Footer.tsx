@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Linkedin, Twitter, Mail, Youtube, Facebook, MessageCircle } from "lucide-react";
 
 const socialLinks = [
@@ -19,8 +20,14 @@ export const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <Link href="/" className="font-display text-xl font-bold">
-              <span className="text-gradient">Nafij</span>
+            <Link href="/" className="group py-1">
+              <Image
+                src="/nafij-islam-logo.png"
+                alt="Nafij Islam"
+                width={130}
+                height={45}
+                className="h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
             <p className="text-muted-foreground text-sm">
               Full-Stack & Shopify Developer

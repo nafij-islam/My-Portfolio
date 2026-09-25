@@ -74,6 +74,11 @@ export const metadata: Metadata = {
       "Nafij Islam is a Full Stack Developer and Web Developer specializing in React, Next.js, Shopify, Bubble.io, SaaS applications, and custom web development solutions.",
     images: ["https://www.nafij.com/nafij-og.png"],
   },
+  icons: {
+    icon: "/nafij-islam-logo.png",
+    shortcut: "/nafij-islam-logo.png",
+    apple: "/nafij-islam-logo.png",
+  },
 };
 
 const jsonLd = {
@@ -125,6 +130,7 @@ const jsonLd = {
       "name": "Nafij Islam - Full Stack Web & Software Development Services",
       "url": "https://www.nafij.com/",
       "image": "https://www.nafij.com/Nafij-Islam.png",
+      "logo": "https://www.nafij.com/nafij-islam-logo.png",
       "description":
         "Professional Full Stack Web Development, custom Shopify stores, Bubble.io SaaS applications, and responsive digital products for international clients.",
       "priceRange": "$$",
