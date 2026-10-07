@@ -129,7 +129,7 @@ export default function About() {
                   </Button>
 
                   <Button size="lg" variant="outline" asChild>
-                    <a href="/Nafij.pdf" download>
+                    <a href="/public/NAFIJ-ISLAM-RESUME.pdf" download>
                       Download CV
                     </a>
                   </Button>
